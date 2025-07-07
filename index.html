@@ -8,17 +8,435 @@
     <title>Polo</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="top_banner">
         <div class="top_banner_center">
             <p>랄프 로렌 2025ss 시즌 오프</p>
-            <img src="" alt="">
-            <p>쇼핑하기</p >
+            <img src="./images/Line_1.png" alt=" 구분선">
+            <a href="#">
+                <p>쇼핑하기</p >
+            </a>
         </div>
         <div class="remove_btn">
-            <img src="" alt="">
+            <img src="./images/white_x_.png" alt="탑배너 지우기">
         </div>
+    </div>
+    <div id="wrap">
+        <header>
+            <h1><a href="./index.html"></a><img src="./images/polo_logo.png" alt="폴로 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">남성</a></li>
+                    <li><a href="#">여성</a></li>
+                    <li><a href="#">키즈 & 베이비</a></li>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">기프트</a></li>
+                    <li><img src="./images/Line_2.png" alt="gnb 구분선"></li>
+                    <li><a href="#">DISCOVER</a></li>
+                    <li><a href="#">sale</a></li>
+                </ul>
+            </nav>
+            <ul class="right_menu">
+                <li><a href="#"><img src="./images/search.png" alt="검색바"></a></li>
+                <li><a href="#"><img src="./images/my_page.png" alt="마이 페이지"></a></li>
+                <li><a href="#"><img src="./images/cart.png" alt="장바구니"></a></li>
+            </ul>
+        </header>
+        <main>
+            <!-- 영상배너 1행 -->
+            <section class="main_video">
+                <div class="video">
+
+                </div>
+                <div class="video_txt">
+                    <p>pre-spring<br>2025 collection</p>
+                    <p>2025년 프리 스피링 컬렉션은 새로운 종류의 럭셔리 스포츠웨어를 테마로 합니다</p>
+                </div>
+            </section>
+            <!-- 2행 -->
+            <section class="history_wrap">
+                <div class="left_wrap">
+                    <h1>“The Timeless Wardrobe”</h1>
+                    <p>세대를 넘어 입을 수 있는 옷.<br>시간이 지날수록 더 멋스럽고 더 의미 있어지는 옷.랄프로렌은 그런 타임리스 스타일을 만듭니다.</p>
+                    <p>이탈리아산 캐시미어 니트부터 두툼한 코튼 폴로 셔츠까지,<br>디테일 하나까지도 세심하게 완성하여 오래 입을수록 가치를 더하는 제품을 선보입니다.</p>
+                    <p>랄프 로렌은 변하지 않는 아름다움을 추구합니다. 1967년, 첫 넥타이 컬렉션부터<br> 시작된 그의 디자인 철학은  클래식한 스타일과 최고의 품질로 이어져 왔습니다</p>
+                </div>
+                <div class="right_wrap">
+                    <img src="./images/history_img.jpg" alt="">
+                </div>
+            </section>
+            <!-- 3행 -->
+            <section class="new_arrival">
+                <h1>New Arrival</h1>
+                <p>“ 우아함과 실용성, 두가지를 모두 담은 폴로의 제안.”</p>
+                <div class="gender">
+                    <button type="button" id="man_btn">men</button>
+                    <img src="./images/Line_3.png" alt="구분선">
+                    <button type="button" id="Women_btn">Women</button>
+                </div>
+                <div class="swiper" id="product_slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_001.jpg" alt="클래식핏 로고 저지 티셔츠">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">클래식핏 로고 저지 티셔츠</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    레터맨 스타일 아플리케로 디자인된 Ralph Lauren의 로고와 시그니처 포니 자수가 특징인 빅사이즈 코튼 티셔츠입니다.
+                                </p>
+                                <div class="product_price">
+                                    <span>₩159,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #31355B;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #345A4D;" aria-label="그린컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_002.jpg" alt="코튼 크루넥 숏 슬리브 스웨터">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">코튼 크루넥 숏 슬리브 스웨터</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    코마면사와 세련된 섬세한 니트 구조를 적용하여 티셔츠의 깔끔한 실루엣을 새롭게 해석한 스웨터입니다.
+                                </p>
+                                <div class="product_price">
+                                    <span>₩239,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #616D93;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #fff;" aria-label="화이트 컬러"></button>
+                                        <button class="color_chip" style="background-color: #A5A1A0;" aria-label="그레이컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_003.jpg" alt="코튼 폴로 칼라 스웨터">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">코튼 폴로 칼라 스웨터</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    시그니처 포니 자수부터 짧은 소매 실루엣까지 Ralph Lauren의 아이코닉한 폴로 셔츠를 모티브로 디자인된 고급 니트 스웨터입니다. 
+                                </p>
+                                <div class="product_price">
+                                    <span>₩259,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #84947A;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #DCC7B0;" aria-label="그린컬러"></button>
+                                        <button class="color_chip" style="background-color: #CECCCB;" aria-label="그린컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide4">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_004.jpg" alt="가먼트 다이 슬러브 리넨 오버셔츠">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">가먼트 다이 슬러브 리넨 오버셔츠</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    유틸리티 스타일의 실루엣과 슬러브 리넨 패브릭이 어우러진 은은한 질감이 돋보이며 가볍게 레이어링할 수 있는 오버셔츠입니다
+                                </p>
+                                <div class="product_price">
+                                    <span>₩299,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #EEE6D7;" aria-label="아이보리컬러"></button>
+                                        <button class="color_chip" style="background-color: #191D42;" aria-label="네이비컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide5">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_005.jpg" alt="클래식핏 스트라이프 리넨 셔츠">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">클래식핏 스트라이프 리넨 셔츠</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    따뜻한 날씨에 세련된 스타일로 연출할 수 있는 스트라이프 셔츠로, 가볍고 하늘하늘한 리넨 소재에 Ralph Lauren의 타임리스 디자인이 어우러집니다. 
+                                </p>
+                                <div class="product_price">
+                                    <span>₩259,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #BABCB3;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #DEC1C9;" aria-label="그린컬러"></button>
+                                        <button class="color_chip" style="background-color: #D1C9D6;" aria-label="그린컬러"></button>
+                                        <button class="color_chip" style="background-color: #B0B7C1;" aria-label="그린컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                    <div class="view_btn_wrap">
+                        <a href="#" class="view_btn">
+                            <span>view more  +</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- 4행 -->
+            <section class="gift_wrap">
+                <div class="gift_left_wrap">
+                    <h2>Gifts for<br>every occasion</h2>
+                    <p>“고마운 마음을 전하고 싶을 때, 폴로가 준비한 가장 감각적인 선물”</p>
+                    <a href="#" class="gift_btn">View more Gifts</a>
+                </div>
+                <div class="right_wrap">
+                    <div class="swiper" id="gift_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide1">
+                                <div class="slide_inner">
+                                    <div class="slide_txt">
+                                        <h2>For him</h2>
+                                        <p>"For the man of distinction."</p>
+                                        <a href="#">View More</a>
+                                    </div>
+                                    <div class="gift_slide_img">
+                                        <img src="./images/gift_001.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide2">
+                                <div class="slide_inner">
+                                    <div class="slide_txt">
+                                        <h2>For him</h2>
+                                        <p>"For the man of distinction."</p>
+                                        <a href="#">View More</a>
+                                    </div>
+                                    <div class="gift_slide_img">
+                                        <img src="./images/gift_001.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide3">
+                                <div class="slide_inner">
+                                    <div class="slide_txt">
+                                        <h2>For him</h2>
+                                        <p>"For the man of distinction."</p>
+                                        <a href="#">View More</a>
+                                    </div>
+                                    <div class="gift_slide_img">
+                                        <img src="./images/gift_001.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide4">
+                                <div class="slide_inner">
+                                    <div class="slide_txt">
+                                        <h2>For him</h2>
+                                        <p>"For the man of distinction."</p>
+                                        <a href="#">View More</a>
+                                    </div>
+                                    <div class="gift_slide_img">
+                                        <img src="./images/gift_001.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide5">
+                                <div class="slide_inner">
+                                    <div class="gift_slide_img">
+                                        <img src="./images/gift_001.jpg">
+                                    </div>
+                                    <div class="slide_txt">
+                                        <h2>For him</h2>
+                                        <p>"For the man of distinction."</p>
+                                        <a href="#">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div> <!-- 오른쪽 동그라미 다섯개 -->
+                    <!-- 자동 슬라이드 시간 표시바 -->
+                    <div class="swiper-pagination-progressbar">
+                        <span class="progress"></span>
+                    </div>
+                    <div class="slide-number">
+                        <span class="current">1</span>/<span class="total">5</span>
+                    </div>
+                    <!-- 화살표 -->
+                    <div class="swiper-button-prev"><img src="./images/arrow_left.png"></div>
+                    <div class="swiper-button-next"><img src="./images/arrow_right.png"></div>
+                </div>
+            </section>
+            <!-- 5행 -->
+            <section class="polo kids summer collection">
+                <h1>polo kids summer collection</h1>
+                <p>“ 더운 여름, 시원하고 스타일리시하게! 우리 아이를 위한 폴로 키즈 썸머룩.”</p>
+                <div class="gender_age">
+                    <div class="gender_left">
+                        <button type="button" id="Boys_btn">Boys</button>
+                        <img src="./images/Line_3.png" alt="구분선">
+                        <button type="button" id="Grils_btn">Girls</button>
+                    </div>
+                    <div class="age_right">
+                        <button type="button" id="ages_btn">2~7세</button>
+                        <button type="button" id="ages_btn">8~18세</button>
+                    </div>
+                </div>
+                <div class="swiper" id="kids_product_slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_001.jpg" alt="클래식핏 로고 저지 티셔츠">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">클래식핏 로고 저지 티셔츠</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    레터맨 스타일 아플리케로 디자인된 Ralph Lauren의 로고와 시그니처 포니 자수가 특징인 빅사이즈 코튼 티셔츠입니다.
+                                </p>
+                                <div class="product_price">
+                                    <span>₩159,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #31355B;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #345A4D;" aria-label="그린컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_002.jpg" alt="코튼 크루넥 숏 슬리브 스웨터">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">코튼 크루넥 숏 슬리브 스웨터</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    코마면사와 세련된 섬세한 니트 구조를 적용하여 티셔츠의 깔끔한 실루엣을 새롭게 해석한 스웨터입니다.
+                                </p>
+                                <div class="product_price">
+                                    <span>₩239,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #616D93;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #fff;" aria-label="화이트 컬러"></button>
+                                        <button class="color_chip" style="background-color: #A5A1A0;" aria-label="그레이컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_003.jpg" alt="코튼 폴로 칼라 스웨터">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">코튼 폴로 칼라 스웨터</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    시그니처 포니 자수부터 짧은 소매 실루엣까지 Ralph Lauren의 아이코닉한 폴로 셔츠를 모티브로 디자인된 고급 니트 스웨터입니다. 
+                                </p>
+                                <div class="product_price">
+                                    <span>₩259,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #84947A;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #DCC7B0;" aria-label="그린컬러"></button>
+                                        <button class="color_chip" style="background-color: #CECCCB;" aria-label="그린컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide4">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_004.jpg" alt="가먼트 다이 슬러브 리넨 오버셔츠">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">가먼트 다이 슬러브 리넨 오버셔츠</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    유틸리티 스타일의 실루엣과 슬러브 리넨 패브릭이 어우러진 은은한 질감이 돋보이며 가볍게 레이어링할 수 있는 오버셔츠입니다
+                                </p>
+                                <div class="product_price">
+                                    <span>₩299,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #EEE6D7;" aria-label="아이보리컬러"></button>
+                                        <button class="color_chip" style="background-color: #191D42;" aria-label="네이비컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide5">
+                            <div class="product_img">
+                                <a href="#">
+                                    <img src="./images/new_arrival_005.jpg" alt="클래식핏 스트라이프 리넨 셔츠">
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <div class="product_title">
+                                    <a href="#">클래식핏 스트라이프 리넨 셔츠</a>
+                                    <button type="button" class="wishlist_btn"><img src="./images/wishlist_btn.png" alt="위시리스트"></button>
+                                </div>
+                                <p class="product_subtxt">
+                                    따뜻한 날씨에 세련된 스타일로 연출할 수 있는 스트라이프 셔츠로, 가볍고 하늘하늘한 리넨 소재에 Ralph Lauren의 타임리스 디자인이 어우러집니다. 
+                                </p>
+                                <div class="product_price">
+                                    <span>₩259,000</span>
+                                    <div class="color_options">
+                                        <button class="color_chip" style="background-color: #BABCB3;" aria-label="네이비컬러"></button>
+                                        <button class="color_chip" style="background-color: #DEC1C9;" aria-label="그린컬러"></button>
+                                        <button class="color_chip" style="background-color: #D1C9D6;" aria-label="그린컬러"></button>
+                                        <button class="color_chip" style="background-color: #B0B7C1;" aria-label="그린컬러"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                    <div class="view_btn_wrap">
+                        <a href="#" class="view_btn">
+                            <span>view more  +</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 </body> 
 </html>
