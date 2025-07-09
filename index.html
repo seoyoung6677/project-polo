@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <script src="./script/index.js" defer></script>
     <!--플러그인 필수 css cdn 연결-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--플러그인 필수 JS cdn 연결-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -32,7 +32,7 @@
     </div>
     <div id="wrap">
         <header>
-            <h1><a href="./index.html"></a><img src="./images/polo_logo.png" alt="폴로 로고"></a></h1>
+            <h1><a href="./index.html"><img src="./images/polo_logo.png" alt="폴로 로고"></a></h1>
             <nav>
                 <ul class="gnb">
                     <li><a href="#">남성</a></li>
@@ -288,20 +288,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div> <!-- 오른쪽 동그라미 다섯개 -->
-                        <!-- 자동 슬라이드 시간 표시바 -->
-                        <div class="swiper-pagination-progressbar">
-                            <span class="progress"></span>
-                        </div>
-                        <div class="slide-number">
-                            <span class="current">1</span>/<span class="total">5</span>
-                        </div>
                         <!-- 화살표 -->
                         <div class="swiper-button-wrap">
                             <div class="swiper-button-prev"><img src="./images/arrow_left.png"></div>
                             <div class="swiper-button-next"><img src="./images/arrow_right.png"></div>
                         </div>
-                    </div>
+                        <div class="swiper-pagination swiper-pagination-progressbar">
+                            <span class="progress"></span>
+                        </div>
+                        <div class="slide-number">
+                        <span class="current">1</span>/<span class="total">5</span>
+                        </div>
+                        <!-- <div class="swiper-pagination"></div>  --><!-- 오른쪽 동그라미 다섯개 -->
+                        <!-- 자동 슬라이드 시간 표시바 -->
+                </div>
                 </div>
             </section>
             <!-- 5행 -->
@@ -315,8 +315,8 @@
                         <button type="button" id="Grils_btn">Girls</button>
                     </div>
                     <div class="age_right">
-                        <button type="button" id="ages_btn">2~7세</button>
-                        <button type="button" id="ages_btn">8~18세</button>
+                        <button type="button" id="ages_btn_1">2~7세</button>
+                        <button type="button" id="ages_btn_2">8~18세</button>
                     </div>
                 </div>
                 <div class="swiper" id="kids_product_slide">

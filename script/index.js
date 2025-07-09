@@ -34,7 +34,9 @@ const giftSwiper = new Swiper('#gift_swiper', {
 
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    /* clickable: true, */
+    type:'progressbar',
+    horizontalClass: '.swiper-pagination-progressbar',
   },
 
   navigation: {
