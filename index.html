@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <script src="./script/index.js" defer></script>
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="top_banner">
@@ -211,91 +217,95 @@
             </section>
             <!-- 4행 -->
             <section class="gift_wrap">
-                <div class="gift_left_wrap">
-                    <h2>Gifts for<br>every occasion</h2>
-                    <p>“고마운 마음을 전하고 싶을 때, 폴로가 준비한 가장 감각적인 선물”</p>
-                    <a href="#" class="gift_btn">View more Gifts</a>
-                </div>
-                <div class="right_wrap">
-                    <div class="swiper" id="gift_swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide1">
-                                <div class="slide_inner">
-                                    <div class="slide_txt">
-                                        <h2>For him</h2>
-                                        <p>"For the man of distinction."</p>
-                                        <a href="#">View More</a>
-                                    </div>
-                                    <div class="gift_slide_img">
-                                        <img src="./images/gift_001.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slide_inner">
-                                    <div class="slide_txt">
-                                        <h2>For him</h2>
-                                        <p>"For the man of distinction."</p>
-                                        <a href="#">View More</a>
-                                    </div>
-                                    <div class="gift_slide_img">
-                                        <img src="./images/gift_001.jpg">
+                <div class="gift_container">
+                    <div class="gift_left_wrap">
+                        <h2>Gifts for<br>every occasion</h2>
+                        <p>“고마운 마음을 전하고 싶을 때, 폴로가 준비한 가장 감각적인 선물”</p>
+                        <a href="#" class="gift_btn">View more Gifts</a>
+                    </div>
+                    <div class="right_wrap">
+                        <div class="swiper" id="gift_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1">
+                                    <div class="slide_inner">
+                                        <div class="slide_txt">
+                                            <h2>For him</h2>
+                                            <p>"For the man of distinction."</p>
+                                            <a href="#">View More</a>
+                                        </div>
+                                        <div class="gift_slide_img">
+                                            <img src="./images/gift_001.jpg">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide slide3">
-                                <div class="slide_inner">
-                                    <div class="slide_txt">
-                                        <h2>For him</h2>
-                                        <p>"For the man of distinction."</p>
-                                        <a href="#">View More</a>
-                                    </div>
-                                    <div class="gift_slide_img">
-                                        <img src="./images/gift_001.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide4">
-                                <div class="slide_inner">
-                                    <div class="slide_txt">
-                                        <h2>For him</h2>
-                                        <p>"For the man of distinction."</p>
-                                        <a href="#">View More</a>
-                                    </div>
-                                    <div class="gift_slide_img">
-                                        <img src="./images/gift_001.jpg">
+                                <div class="swiper-slide slide2">
+                                    <div class="slide_inner">
+                                        <div class="slide_txt">
+                                            <h2>For him</h2>
+                                            <p>"For the man of distinction."</p>
+                                            <a href="#">View More</a>
+                                        </div>
+                                        <div class="gift_slide_img">
+                                            <img src="./images/gift_001.jpg">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide slide5">
-                                <div class="slide_inner">
-                                    <div class="gift_slide_img">
-                                        <img src="./images/gift_001.jpg">
+                                <div class="swiper-slide slide3">
+                                    <div class="slide_inner">
+                                        <div class="slide_txt">
+                                            <h2>For him</h2>
+                                            <p>"For the man of distinction."</p>
+                                            <a href="#">View More</a>
+                                        </div>
+                                        <div class="gift_slide_img">
+                                            <img src="./images/gift_001.jpg">
+                                        </div>
                                     </div>
-                                    <div class="slide_txt">
-                                        <h2>For him</h2>
-                                        <p>"For the man of distinction."</p>
-                                        <a href="#">View More</a>
+                                </div>
+                                <div class="swiper-slide slide4">
+                                    <div class="slide_inner">
+                                        <div class="slide_txt">
+                                            <h2>For him</h2>
+                                            <p>"For the man of distinction."</p>
+                                            <a href="#">View More</a>
+                                        </div>
+                                        <div class="gift_slide_img">
+                                            <img src="./images/gift_001.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide slide5">
+                                    <div class="slide_inner">
+                                        <div class="gift_slide_img">
+                                            <img src="./images/gift_001.jpg">
+                                        </div>
+                                        <div class="slide_txt">
+                                            <h2>For him</h2>
+                                            <p>"For the man of distinction."</p>
+                                            <a href="#">View More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div> <!-- 오른쪽 동그라미 다섯개 -->
+                        <!-- 자동 슬라이드 시간 표시바 -->
+                        <div class="swiper-pagination-progressbar">
+                            <span class="progress"></span>
+                        </div>
+                        <div class="slide-number">
+                            <span class="current">1</span>/<span class="total">5</span>
+                        </div>
+                        <!-- 화살표 -->
+                        <div class="swiper-button-wrap">
+                            <div class="swiper-button-prev"><img src="./images/arrow_left.png"></div>
+                            <div class="swiper-button-next"><img src="./images/arrow_right.png"></div>
+                        </div>
                     </div>
-                    <div class="swiper-pagination"></div> <!-- 오른쪽 동그라미 다섯개 -->
-                    <!-- 자동 슬라이드 시간 표시바 -->
-                    <div class="swiper-pagination-progressbar">
-                        <span class="progress"></span>
-                    </div>
-                    <div class="slide-number">
-                        <span class="current">1</span>/<span class="total">5</span>
-                    </div>
-                    <!-- 화살표 -->
-                    <div class="swiper-button-prev"><img src="./images/arrow_left.png"></div>
-                    <div class="swiper-button-next"><img src="./images/arrow_right.png"></div>
                 </div>
             </section>
             <!-- 5행 -->
-            <section class="polo kids summer collection">
+            <section class="polo_kids_collection">
                 <h1>polo kids summer collection</h1>
                 <p>“ 더운 여름, 시원하고 스타일리시하게! 우리 아이를 위한 폴로 키즈 썸머룩.”</p>
                 <div class="gender_age">

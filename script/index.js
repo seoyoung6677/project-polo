@@ -19,3 +19,33 @@ removeBtn.addEventListener('click',()=>{
     header.style.top='0';
     bannerHeight=0;
 });
+
+const giftSwiper = new Swiper('#gift_swiper', {
+  direction: 'vertical',
+  loop: true,
+  centeredSlides: true, // 가운데 정렬
+  slidesPerView: 3,     // 위, 아래 슬라이드 살짝 보이게
+  slidesPerView:'auto',
+  spaceBetween:30,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  on: {
+    slideChange: function () {
+      document.querySelector('.slide-number .current').textContent = this.realIndex + 1;
+    },
+  },
+  
+});
