@@ -4,7 +4,7 @@ const header = document.querySelector('header');
 
 
 let bannerHeight = topBanner.offsetHeight;
-
+header.style.top ='${bannerHeight}px';
 window.addEventListener("scroll", ()=>{
     if (window.scrollY > bannerHeight){
         header.style.top="0";
@@ -51,3 +51,32 @@ const giftSwiper = new Swiper('#gift_swiper', {
   },
   
 });
+
+const kidsSwiper = new Swiper('#kids_product_slide',{
+  slidesPerView:5,
+  slidePerGroup:1,
+  spaceBetween:25,
+  loop:true,
+  autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+  },
+  pagination:{
+    el:'swiper-scrollbar',
+    draggable:true,
+  }
+})
+const productSwiper = new Swiper('#product_slide',{
+  slidesPerView:5,
+  slidePerGroup:1,
+  spaceBetween:25,
+  loop:true,
+  autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+  },
+  pagination:{
+    el:'swiper-scrollbar',
+    draggable:true,
+  }
+})
