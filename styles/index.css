@@ -271,32 +271,35 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height:900px; 
+    height:100%; 
     align-items: center;
    /*  position: relative; */
+   width:100%;
 }
 #wrap main .gift_wrap .gift_container{
     max-width:1640px;
     /* margin: 0 auto; */
     display: flex;
     gap:324px;
-    height:900px; 
+    height:100vh; 
+    max-height:900px;
     position: relative;
     padding:0 140px;
     /* border: 5px solid yellow; */
+    width:100%;
 }
 #wrap main  .gift_wrap .gift_container .gift_left_wrap  {
-   width:620px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+    width:620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   /*  align-items: center; */
-   height:100%;
+    height:100%;
     
     /* border: 3px solid red; */
-  
-   
-   
+    
+    
+    
 }
 #wrap main .gift_wrap .gift_container .gift_left_wrap  > * {
     color:#fff;
@@ -325,7 +328,8 @@
 }
 #wrap main .gift_wrap .gift_container .right_wrap #gift_swiper {
     /* border: 3px solid red; */
-    height: 900px;
+    max-height: 900px;
+    height:100vh;
     overflow: hidden;
     width: 100%;
    /*  position:relative; */
@@ -393,6 +397,7 @@
 #wrap main .gift_wrap .gift_container .right_wrap  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: #fff;
 } */
+#wrap main .gift_wrap .gift_container .right_wrap #gift_swiper 
 #wrap main .gift_wrap .gift_container .right_wrap #gift_swiper .slide-number {}
 #wrap main .gift_wrap .gift_container .right_wrap #gift_swiper .slide-number .current {}
 #wrap main .gift_wrap .gift_container .right_wrap .swiper-button-wrap
@@ -434,7 +439,7 @@
     /* border: 3px solid blue; */
     position: absolute;
     bottom:20px;
-    right:-80px;
+    right:-75px;
     z-index: 200;
     color:#fff;
 }
@@ -443,28 +448,29 @@
     color:#fff;
 }
 
-#wrap main .gift_wrap .gift_container .right_wrap  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background: #fff;
+#wrap main .gift_wrap .gift_container .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: rgba(255,255,255,0.5);
     position: absolute;
     bottom:20px;
     left:50px;
-    /* transition: width 0.3s ease; */
+    transition: width 0.8s ease-in-out;
     height: 100%;
     ;
-    width:80%;
+    width:70%;
 }
-#wrap main .gift_wrap .gift_container .right_wrap  .swiper-pagination-progressbar{
+#wrap main .gift_wrap .gift_container  .swiper-pagination-progressbar{
     position: absolute;
     width:100%;
     height: 4px;
     top:auto;
     bottom:30px;
     left:40px;
-    background: #838383;
+    background: #a3a3a3;
+    border-radius: 20px;
 }
 /* 5행-------------------------------- */
 #wrap main .polo_kids_collection {
-    padding:131px 0 ;
+    padding:131px 90px;
     
 }
 #wrap main .polo_kids_collection .kids_summer_txt{
@@ -482,7 +488,7 @@
 #wrap main .polo_kids_collection .gender_age {
     display: flex;
     align-items: center;
-    padding:0 90px;
+    /* padding:0 90px; */
     justify-content: space-between;
     margin-bottom: 25px;
 }
@@ -507,7 +513,8 @@
 } 
 #wrap main .polo_kids_collection #kids_product_slide {
     /* border:3px solid red; */
-    width: 1755px;
+    max-width: 1755px;
+    width:100%;
     /* max-width:1755px; */
     /* overflow: visible; */
 } 
@@ -523,8 +530,13 @@
     width:20%;
     margin-bottom: 109px;
 } 
-#wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_img {} 
+#wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_img {
+    width:100%;
+} 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_img a {} 
+#wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_img a img {
+    width:100%;
+} 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_info {
     display: grid;
     gap:7px;
@@ -578,3 +590,93 @@
 
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .view_btn_wrap a span {} 
+
+/* 6행===================== */
+#wrap main .polo_collection {}
+#wrap main .polo_collection .collectin_title {
+    text-align: center;
+}
+#wrap main .polo_collection .collectin_title h2 {
+    font-size: 2.125rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+#wrap main .polo_collection .collectin_title p {
+    color:#747474;
+    margin-bottom: 50px;
+}
+#wrap main .polo_collection #collection_swiper {
+    width:100%;
+    overflow: hidden;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper {
+    display: flex;
+}
+#collection_swiper .swiper-slide::after {
+    content: "";
+    position: absolute;
+    top:0; left:0; right: 0; bottom:0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+#wrap main .polo_collection .swiper-slide-center{
+    transform: scale(1);
+    opacity: 1;
+    z-index: 40;
+}
+#collection_swiper .swiper-slide-center-slide::after{
+    display: none;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+    transition: all 0.5s ease;
+    transform: scale(0.8);
+    opacity:0.5;
+    filter: brightness(0.6);
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide.active {
+    transform: scale(1);
+    opacity:1;
+    filter: brightness(1);
+    z-index: 10;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img {}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img a {}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img a img {
+    width:100%;
+    display: block;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_txt {
+    position: absolute;
+    left:40px;
+    bottom:40px;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img {}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_p {}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_p:nth-child(2) {}
+#wrap main .polo_collection #collection_swiper .swiper-scrollbar {}
+
+
+/* 마지막행 */
+#wrap main .collection_2025 {
+    padding:131px 0;
+}
+#wrap main .collection_2025 .collection_title_2025 {}
+#wrap main .collection_2025 .collection_title_2025 h2 {
+    font-size: 2.125rem;
+    font-weight:600;
+    margin-bottom:20px;
+    padding:0 50px;
+}
+#wrap main .collection_2025 #collection_swiper_2025 {}
+#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper {}
+#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide {
+    position: relative;
+}
+#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide img {}
+#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide .collection_txt_2025 {
+    position: ;
+}
+#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide .collection_txt_2025 h3 {}
+#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide .collection_txt_2025 p {}

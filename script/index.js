@@ -28,7 +28,7 @@ const giftSwiper = new Swiper('#gift_swiper', {
   slidesPerView:'auto',
   spaceBetween:30,
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: false,
   },
 
@@ -78,5 +78,36 @@ const productSwiper = new Swiper('#product_slide',{
   pagination:{
     el:'swiper-scrollbar',
     draggable:true,
+  }
+})
+
+const collectionSwiper = new Swiper('#collection_swiper',{
+  loop: true,
+  slidesPerView:'3',
+  centeredSlides:true,
+  spaceBetween:30,
+
+  autoplay:{
+    delay:3000,
+    disableOnInteraction:true
+  },
+  pagination :{
+    el:'.collection-pagination',
+    type:'progressbar'
+  },
+  navigation:{
+    nextEl: 'swiper-button-prev',
+    prevEl: 'swiper-button-next',
+  },
+  on:{
+    slideChangeTransitionStart:function(){
+      document.querySelectorAll('.swiper-slide').forEach(slide =>{
+        slide.classList.remove('active');
+      });
+    },
+    slideChangeTransitionEnd:function(){
+      const activeSlide = document.querySelector('.swiper-slide-active');
+      activeSlide.classList.add('active');
+    }
   }
 })
