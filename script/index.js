@@ -72,7 +72,7 @@ const productSwiper = new Swiper('#product_slide',{
   spaceBetween:25,
   loop:true,
   autoplay:{
-    delay:2500,
+    delay:2000,
     disableOnInteraction:false,
   },
   pagination:{
@@ -81,33 +81,117 @@ const productSwiper = new Swiper('#product_slide',{
   }
 })
 
-const collectionSwiper = new Swiper('#collection_swiper',{
-  loop: true,
-  slidesPerView:'3',
-  centeredSlides:true,
-  spaceBetween:30,
 
-  autoplay:{
-    delay:3000,
-    disableOnInteraction:true
-  },
-  pagination :{
-    el:'.collection-pagination',
-    type:'progressbar'
-  },
-  navigation:{
-    nextEl: 'swiper-button-prev',
-    prevEl: 'swiper-button-next',
-  },
-  on:{
-    slideChangeTransitionStart:function(){
-      document.querySelectorAll('.swiper-slide').forEach(slide =>{
-        slide.classList.remove('active');
-      });
+ /*  const swiper = new Swiper("#collection_swiper", {
+    slidesPerView: 1.5, // 한 번에 보이는 슬라이드 개수
+    centeredSlides: true, // 가운데 정렬
+    loop: true,
+    spaceBetween: 20,
+    pagination: {
+      el: ".collection-pagination",
+      clickable: true,
     },
-    slideChangeTransitionEnd:function(){
-      const activeSlide = document.querySelector('.swiper-slide-active');
-      activeSlide.classList.add('active');
-    }
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+    },
+    autoplay:{
+      delay:2000,
+      disableOnInteraction:false,
+    },
+    on: {
+      slideChangeTransitionEnd: function () {
+        // 모든 슬라이드에서 center-slide 클래스 제거
+        document
+          .querySelectorAll("#collection_swiper .swiper-slide")
+          .forEach((slide) => slide.classList.remove("center-slide"));
+
+        // 현재 가운데 슬라이드에 클래스 추가
+        const centerSlide = document.querySelector(
+          "#collection_swiper .swiper-slide.swiper-slide-active"
+        );
+        if (centerSlide) {
+          centerSlide.classList.add("center-slide");
+        }
+      },
+    },
+  });
+// 최초 로딩 시에도 center-slide 붙이기
+window.addEventListener("load", function () {
+  const centerSlide = document.querySelector(
+    "#collection_swiper .swiper-slide.swiper-slide-active"
+  );
+  if (centerSlide) {
+    centerSlide.classList.add("center-slide");
   }
-})
+});
+
+const slides = document.querySelectorAll('.swiper-slide');
+
+slides.forEach(slide => {
+  if (slide.classList.contains('center-slide')) {
+    slide.style.opacity = '1';
+    slide.style.transform = 'scale(1)';
+    slide.style.filter = 'brightness(1)';
+  }
+}); */
+const swiper = new Swiper("#collection_swiper", {
+  slidesPerView: 1.5,
+  centeredSlides: true,
+  loop: true,
+  spaceBetween: 60,
+  pagination: {
+    el: ".collection-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  on: {
+    init: function () {
+      updateCenterSlide(this);
+    },
+    slideChangeTransitionEnd: function () {
+      updateCenterSlide(this);
+    },
+  },
+});
+
+// 공통 함수로 중앙 슬라이드만 강조
+function updateCenterSlide(swiperInstance) {
+  const slides = document.querySelectorAll("#collection_swiper .swiper-slide");
+
+  slides.forEach((slide) => {
+    slide.classList.remove("center-slide");
+    slide.style.opacity = "0.4";
+    slide.style.transform = "scale(0.9)";
+    slide.style.filter = "brightness(0.8)";
+  });
+
+  const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+  if (activeSlide) {
+    activeSlide.classList.add("center-slide");
+    activeSlide.style.opacity = "1";
+    activeSlide.style.transform = "scale(1.2)";
+    activeSlide.style.filter = "brightness(1)";
+    activeSlide.style.zIndex = "10";
+  }
+}
+
+// 로딩 시도 동일하게 적용
+window.addEventListener("load", () => {
+  updateCenterSlide(swiper);
+});

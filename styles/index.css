@@ -1,4 +1,6 @@
-
+body{
+    overflow-x: hidden;
+}
 /* topbanner */
 .top_banner {
     width:100%;
@@ -109,7 +111,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap:415px;
+    gap:380px;
 }
 #wrap main .history_wrap .left_wrap {
     padding:60px 60px;
@@ -196,6 +198,11 @@
    /*  max-width:331px; */
     /* border:3px solid blue; */
     width:100%;
+    transition: transform 0.3s ease;
+}
+#wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img a img:hover{
+    transform: scale(1.03);
+    z-index: 20;
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info {
     padding:10px 10px;
@@ -247,12 +254,13 @@
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_price .color_options .color_chip
 #wrap main .new_arrival #product_slide .swiper-scrollbar {}
-#wrap main .new_arrival #product_slide .view_btn_wrap {
+#wrap main .new_arrival .view_btn_wrap {
     text-align: center;
+    margin-top: 38.9px;
     
 }
 #wrap main .new_arrival #product_slide .view_btn_wrap .view_btn {}
-#wrap main .new_arrival #product_slide .view_btn_wrap a span{
+#wrap main .new_arrival .view_btn_wrap a span{
     font-size: 0.875rem;
     font-weight: 600;
     background-color: #f9f9f9;
@@ -591,10 +599,13 @@
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .view_btn_wrap a span {} 
 
-/* 6행===================== */
-#wrap main .polo_collection {}
+/* 6행===================== ======================================*/
+#wrap main .polo_collection {
+
+}
 #wrap main .polo_collection .collectin_title {
     text-align: center;
+    z-index: 100;
 }
 #wrap main .polo_collection .collectin_title h2 {
     font-size: 2.125rem;
@@ -603,37 +614,86 @@
 }
 #wrap main .polo_collection .collectin_title p {
     color:#747474;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 }
 #wrap main .polo_collection #collection_swiper {
-    width:100%;
-    overflow: hidden;
+    width:80%;
+    /* overflow: hidden; */
+    overflow: visible;
+    margin: 0 auto;
 }
 #wrap main .polo_collection #collection_swiper .swiper-wrapper {
     display: flex;
+    max-width:1920px;
+    /* gap:20px; */
+    /* border: 3px solid green; */
+    align-items: center;
 }
-#collection_swiper .swiper-slide::after {
+
+/* 양옆 슬라이드 어둡게 */
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide::after{
     content: "";
     position: absolute;
     top:0; left:0; right: 0; bottom:0;
-    background: rgba(0,0,0,0.5);
-    z-index: 1;
+    background: rgba(0,0,0,0.3);
+    z-index: 500;
     pointer-events: none;
+    transition: all 0.3s ease;
+    mix-blend-mode: multiply;
+   /*  border: 3px solid green; */
 }
-#wrap main .polo_collection .swiper-slide-center{
-    transform: scale(1);
+/* #collection_swiper .swiper-slide.swiper-slide-active {
+  opacity: 0.5 !important;
+  transform: scale(1) !important;
+} */
+/* 모든 슬라이드에 어두운 검정 오버레이 */
+/* #collection_swiper .swiper-slide::after {
+    
+    
+} */
+/* 가운데 슬라이드는 크게, 선명하게 */
+/* #collection_swiper .swiper-slide.center-slide {
+    transform: scale(1.2);
     opacity: 1;
     z-index: 40;
-}
-#collection_swiper .swiper-slide-center-slide::after{
-    display: none;
+    filter:brightness(1);
+    transition: transform 0.3s ease;
+} */
+#collection_swiper .swiper-slide.center-slide::after{
+    display: none !important;
+    background: transparent;
+    border:3px solid red;
 }
 #wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide {
+    
+}
+#collection_swiper .swiper-slide {
+    width:640px;
+    height: 100%;
+    /* border:5px solid blue; */
+    /* opacity:0.4; */
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    z-index:1;
     position: relative;
+    overflow: hidden;
+}
+/* #collection_swiper .swiper-wrapper .swiper-slide::after{
+    display: none;
+
+} */
+
+/* 기본 슬라이드는 작고 흐리게 */
+#collection_swiper .swiper-slide.swiper-slide-active.center-slide {
+   /*  position: relative; */
     transition: all 0.5s ease;
-    transform: scale(0.8);
-    opacity:0.5;
+    transform: scale(1.01);
+    opacity:1;
     filter: brightness(0.6);
+    /* border:3px solid red; */
+    /* width:100%; */
+    z-index: 10;
+    height:100%;
 }
 #wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide.active {
     transform: scale(1);
@@ -641,16 +701,32 @@
     filter: brightness(1);
     z-index: 10;
 }
-#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img {}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide.active::after{
+    display: none !important;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide{
+   width:100%;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img {
+    width:100%;
+    height:100%;
+    
+}
 #wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img a {}
 #wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img a img {
     width:100%;
     display: block;
+    height:100%;
+    object-fit: cover;
+    /* border:3px solid green; */
 }
 #wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_txt {
     position: absolute;
     left:40px;
     bottom:40px;
+}
+#wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_txt > img {
+    width:100%;
 }
 #wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_img {}
 #wrap main .polo_collection #collection_swiper .swiper-wrapper .swiper-slide .collection_p {}
@@ -674,7 +750,9 @@
 #wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide {
     position: relative;
 }
-#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide img {}
+#wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide  a img {
+    width:100%;
+}
 #wrap main .collection_2025 #collection_swiper_2025 .swiper-wrapper .swiper-slide .collection_txt_2025 {
     position: ;
 }
