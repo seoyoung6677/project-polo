@@ -111,6 +111,7 @@ body{
 #wrap main .main_video {
     position: relative;
     width:100%;
+    display: block;
 }
 #wrap main .main_video .video video {
     width:100%;
