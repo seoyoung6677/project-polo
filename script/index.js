@@ -206,3 +206,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   )
 })
+
+/* 관심 상품 하트 */
+const wishlistBtns = document.querySelectorAll('.wishlist_btn');
+
+wishlistBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+  });
+});
