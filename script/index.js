@@ -16,7 +16,7 @@ removeBtn.addEventListener('click',()=>{
     //탑배너 숨기기
     topBanner.style.display = 'none';
     //헤더 위치 조정하기
-    header.style.top='0';
+    header.style.top='0'; 
     bannerHeight=0;
 });
 
@@ -71,22 +71,58 @@ const productSwiper = new Swiper('#product_slide',{
   slidesPerView:'5',
   slidesPerGroup:1,
   spaceBetween:25,
+  speed:500,
   loop:true,
   autoplay:{
-    delay:2500,
+    delay:2000,
     disableOnInteraction:false,
   },
   scrollbar:{
     el:'#scrollbar-new .swiper-scrollbar',
     draggable:true,
+    type:'bullets'
   },
   on:{
     init:function (){
       this.update();
     },
   },
+  on: {
+  slideChangeTransitionStart: () => {
+    // progress bar 리셋
+  },
+  slideChangeTransitionEnd: () => {
+    // progress bar 다시 100% 진행
+  },
+}
   
 })
+/* const productSwiper = new Swiper('#product_slide', {
+  slidesPerView: 5,
+  slidesPerGroup: 1,
+  spaceBetween: 25,
+  speed: 600, // 슬라이드 전환 시간
+  loop: true,
+  autoplay: {
+    delay: 3000, // 대기 시간
+    disableOnInteraction: false,
+  },
+  scrollbar: {
+    el: '#scrollbar-new .swiper-scrollbar',
+    draggable: true,
+  },
+  on: {
+    init: function () {
+      this.update();
+    },
+    slideChangeTransitionStart: function () {
+      // 이 시점에서 스크롤바 길이 초기화 등 가능
+    },
+    slideChangeTransitionEnd: function () {
+      // 전환 끝났을 때 원하는 동작 가능
+    },
+  },
+}); */
 
 productSwiper.update();
 const swiper = new Swiper("#collection_swiper", {
