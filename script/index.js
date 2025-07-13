@@ -54,91 +54,41 @@ const giftSwiper = new Swiper('#gift_swiper', {
 
 const kidsSwiper = new Swiper('#kids_product_slide',{
   slidesPerView:5,
-  slidePerGroup:1,
+  slidesPerGroup:1,
   spaceBetween:25,
   loop:true,
   autoplay:{
     delay:2500,
     disableOnInteraction:false,
   },
-  pagination:{
-    el:'swiper-scrollbar',
+  scrollbar:{
+    el:'.swiper-scrollbar',
     draggable:true,
   }
 })
+
 const productSwiper = new Swiper('#product_slide',{
-  slidesPerView:5,
-  slidePerGroup:1,
+  slidesPerView:'5',
+  slidesPerGroup:1,
   spaceBetween:25,
   loop:true,
   autoplay:{
-    delay:2000,
+    delay:2500,
     disableOnInteraction:false,
   },
-  pagination:{
-    el:'swiper-scrollbar',
+  scrollbar:{
+    el:'#scrollbar-new .swiper-scrollbar',
     draggable:true,
-  }
+  },
+  on:{
+    init:function (){
+      this.update();
+    },
+  },
+  
 })
 
-
- /*  const swiper = new Swiper("#collection_swiper", {
-    slidesPerView: 1.5, // 한 번에 보이는 슬라이드 개수
-    centeredSlides: true, // 가운데 정렬
-    loop: true,
-    spaceBetween: 20,
-    pagination: {
-      el: ".collection-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      draggable: true,
-    },
-    autoplay:{
-      delay:2000,
-      disableOnInteraction:false,
-    },
-    on: {
-      slideChangeTransitionEnd: function () {
-        // 모든 슬라이드에서 center-slide 클래스 제거
-        document
-          .querySelectorAll("#collection_swiper .swiper-slide")
-          .forEach((slide) => slide.classList.remove("center-slide"));
-
-        // 현재 가운데 슬라이드에 클래스 추가
-        const centerSlide = document.querySelector(
-          "#collection_swiper .swiper-slide.swiper-slide-active"
-        );
-        if (centerSlide) {
-          centerSlide.classList.add("center-slide");
-        }
-      },
-    },
-  });
-// 최초 로딩 시에도 center-slide 붙이기
-window.addEventListener("load", function () {
-  const centerSlide = document.querySelector(
-    "#collection_swiper .swiper-slide.swiper-slide-active"
-  );
-  if (centerSlide) {
-    centerSlide.classList.add("center-slide");
-  }
-});
-
-const slides = document.querySelectorAll('.swiper-slide');
-
-slides.forEach(slide => {
-  if (slide.classList.contains('center-slide')) {
-    slide.style.opacity = '1';
-    slide.style.transform = 'scale(1)';
-    slide.style.filter = 'brightness(1)';
-  }
-}); */
+productSwiper.update();
 const swiper = new Swiper("#collection_swiper", {
   slidesPerView: 1.5,
   centeredSlides: true,
@@ -195,3 +145,28 @@ function updateCenterSlide(swiperInstance) {
 window.addEventListener("load", () => {
   updateCenterSlide(swiper);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger)
+
+  gsap.fromTo('.left_wrap', 
+    {
+      opacity: 0,
+      y: 60
+    }, 
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: '.left_wrap',
+        start: 'top 60%',
+        end: 'bottom 50%',
+        toggleActions: 'play pause resume reset',
+        /* markers: true, */
+      }
+    }
+  )
+})
