@@ -195,7 +195,7 @@ body{
     100%;
     max-width: 1755px;
     height:573px;
-    /* border:3px solid green; */
+    border:3px solid green;
     /* box-sizing: border-box; */
     
     
@@ -203,27 +203,28 @@ body{
 #wrap main .new_arrival #product_slide .swiper-wrapper {
     display: flex;
     /* gap:25px; */
-    /* border:3px solid aqua; */
+    border:3px solid aqua;
     /* justify-content: center; */
     /* width:auto;
      */
-    height:100%;
+    /* height:100%; */
     width:100%;
-   
-    margin-bottom: 109px;
+    max-width: 1755px;
+    /* margin-bottom: 109px; */
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide {
-    width:331px;
-    /* width: 100%; */
-    /* border:3px solid red; */
     /* width:20%; */
-    max-width: 1755px;
+    /* width: 100%; */
+    border:3px solid red;
+    width:331px;
+    margin-bottom: 109px;
     flex-shrink: 0;
     box-sizing: border-box;
     transition: none !important;
+    height:573px;
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img {
-    width:100%;
+    /* width:100%; */
     overflow: hidden;
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img a {}
@@ -283,7 +284,7 @@ body{
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_price {
     display: flex;
     justify-content: space-between;
-   
+    
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_price span {
     font-weight: 500;
@@ -293,7 +294,7 @@ body{
     /* border: 3px solid red; */
     gap:8px;
     display: flex;
-   
+    
     
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_price .color_options .color_chip {
@@ -324,10 +325,10 @@ body{
     padding:3px 15px;
     border-radius: 20px;
     
-   
+    
 }
 #wrap main .new_arrival #product_slide .view_btn_wrap .view_btn {
-   
+    
 }
 #wrap main .new_arrival .view_btn_wrap a span{
     font-size: 0.875rem;
@@ -523,7 +524,7 @@ body{
 #wrap main .gift_wrap .gift_container .right_wrap #gift_swiper .swiper-wrapper .swiper-slide .slide_inner .gift_slide_img img {}
 #wrap main .gift_wrap .gift_container .right_wrap #gift_swiper .swiper-wrapper .swiper-slide  {}
 #wrap main .gift_wrap .gift_container .right_wrap #gift_swiper .swiper-pagination {
-     border: 3px solid red;
+border: 3px solid red;
 } */
 /* #wrap main .gift_wrap .gift_container .right_wrap .swiper #gift_swiper .swiper-pagination{border: 3px solid blue;}
 #wrap main .gift_wrap .gift_container .right_wrap .swiper #gift_swiper .swiper-pagination{
@@ -698,11 +699,11 @@ body{
     margin-bottom: 109px;
     height:573px;
     /* border:3px solid blue; */
-   
+    
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_img {
     
-     overflow: hidden;
+    overflow: hidden;
     /*  border:3px solid blue; */
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_img a {} 
@@ -751,7 +752,7 @@ body{
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_info .kids_product_price .color_options .color_chip img {} 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-scrollbar {
     
-   
+    
 } 
 #wrap main .polo_kids_collection .view_btn_wrap {
     text-align: center;
@@ -760,7 +761,7 @@ body{
     transition: all 0.3s ease-in-out;
 } 
 #wrap main .polo_kids_collection .view_btn_wrap:hover .view_btn span{
-     background-color:#041E3A;
+    background-color:#041E3A;
     color:red;
     padding:3px 15px;
     border-radius: 20px;
@@ -817,8 +818,8 @@ body{
    /*  border: 3px solid green; */
 }
 /* #collection_swiper .swiper-slide.swiper-slide-active {
-  opacity: 0.5 !important;
-  transform: scale(1) !important;
+opacity: 0.5 !important;
+transform: scale(1) !important;
 } */
 /* 모든 슬라이드에 어두운 검정 오버레이 */
 /* #collection_swiper .swiper-slide::after {
