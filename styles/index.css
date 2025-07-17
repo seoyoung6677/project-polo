@@ -154,7 +154,7 @@ body{
 /* 3행============= */
 #wrap main .new_arrival {
     /* border:red solid 3px; */
-    
+    position:relative;
     padding:129px 90px;
 }
 #wrap main .new_arrival  h1 {
@@ -194,10 +194,11 @@ body{
     width:
     100%;
     max-width: 1755px;
-    height:573px;
+    /* height:573px; */
     border:3px solid green;
     /* box-sizing: border-box; */
-    
+    position: relative;
+    background:red;
     
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper {
@@ -221,7 +222,7 @@ body{
     flex-shrink: 0;
     box-sizing: border-box;
     transition: none !important;
-    height:573px;
+    height:573px; /* 슬라이드에다가 높이? */
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img {
     /* width:100%; */
@@ -311,9 +312,10 @@ body{
     /* border: 3px solid red; */
     display: flex;
     justify-content: center;
-    width:100%;
-    max-width:100%;
-}
+    width:max-content;
+    position: absolute;
+    left:0; bottom:0;
+}   
 #wrap main .new_arrival .view_btn_wrap > .view_btn {
     display:inline-block;
     /* border:1px solid red; */
@@ -324,7 +326,7 @@ body{
     color:red;
     padding:3px 15px;
     border-radius: 20px;
-    
+    display:block;
     
 }
 #wrap main .new_arrival #product_slide .view_btn_wrap .view_btn {
@@ -336,17 +338,18 @@ body{
     background-color: #f9f9f9;
 
 }
-#wrap main .new_arrival #product_slide #scrollbar-new {
+/* #wrap main .new_arrival #product_slide #scrollbar-new {
     background: rgba(0,0,0,0.1);
     height:4px;
     border-radius: 2px;
+    position:absolute;
 }
 #wrap main .new_arrival #product_slide #scrollbar-new .swiper-scrollbar-drag{
     background: rgba(0,0,0,0.5);
     border-radius: 2px;
     width:auto;
 }
-
+ */
 /* 4행------------------------------------- */
 
 .swiper-button-next::after,
@@ -685,6 +688,7 @@ border: 3px solid red;
     width:100%;
     /* max-width:1755px; */
     /* overflow: visible; */
+    background:red;
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper {
     display: flex;
