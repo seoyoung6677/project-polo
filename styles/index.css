@@ -195,16 +195,16 @@ body{
     100%;
     max-width: 1755px;
     /* height:573px; */
-    border:3px solid green;
+    /* border:3px solid green; */
     /* box-sizing: border-box; */
     position: relative;
-    background:red;
+    /* background:red; */
     
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper {
     display: flex;
     /* gap:25px; */
-    border:3px solid aqua;
+    /* border:3px solid aqua; */
     /* justify-content: center; */
     /* width:auto;
      */
@@ -216,13 +216,13 @@ body{
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide {
     /* width:20%; */
     /* width: 100%; */
-    border:3px solid red;
+    /* border:3px solid red; */
     width:331px;
     margin-bottom: 109px;
     flex-shrink: 0;
     box-sizing: border-box;
     transition: none !important;
-    height:573px; /* 슬라이드에다가 높이? */
+    height:550px; /* 슬라이드에다가 높이? */
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img {
     /* width:100%; */
@@ -313,21 +313,30 @@ body{
     display: flex;
     justify-content: center;
     width:max-content;
-    position: absolute;
-    left:0; bottom:0;
+    margin: 30px auto 0;
+    /* position: absolute; */
+    /* left:0; bottom:0; */
+    background-color: #f9f9f9;
+    
 }   
 #wrap main .new_arrival .view_btn_wrap > .view_btn {
     display:inline-block;
     /* border:1px solid red; */
+    padding:5px 15px;
     
 }
-#wrap main .new_arrival .view_btn_wrap:hover .view_btn span{
+#wrap main .new_arrival .view_btn:hover  {
     background-color:#041E3A;
     color:red;
-    padding:3px 15px;
+    transform: scale(1.1);
     border-radius: 20px;
-    display:block;
+    display:inline-block;
+    /* padding:3px 15px; */
     
+}
+#wrap main .new_arrival #product_slide .view_btn_wrap .view_btn > span {
+    /* display:inline-block; */
+    padding:3px 15px;
 }
 #wrap main .new_arrival #product_slide .view_btn_wrap .view_btn {
     
@@ -336,6 +345,7 @@ body{
     font-size: 0.875rem;
     font-weight: 600;
     background-color: #f9f9f9;
+    
 
 }
 /* #wrap main .new_arrival #product_slide #scrollbar-new {
@@ -512,7 +522,7 @@ body{
     /* width:100%; */
     width:fit-content;
     margin: 0 auto;
-    padding:3px 15px;
+    padding:3px 13px;
     text-align: center;
     font-size: 0.7rem;
     
@@ -688,7 +698,7 @@ border: 3px solid red;
     width:100%;
     /* max-width:1755px; */
     /* overflow: visible; */
-    background:red;
+    /* background:red; */
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper {
     display: flex;
@@ -701,7 +711,7 @@ border: 3px solid red;
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide {
     width:20%;
     margin-bottom: 109px;
-    height:573px;
+    height:550px;
     /* border:3px solid blue; */
     
 } 
@@ -762,18 +772,24 @@ border: 3px solid red;
     text-align: center;
     /* border:3px solid red; */
     margin-top:38.9px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
+    width:max-content;
+    background-color: #f9f9f9;
+    margin: 30px auto 0;
 } 
-#wrap main .polo_kids_collection .view_btn_wrap:hover .view_btn span{
+#wrap main .polo_kids_collection .view_btn:hover {
     background-color:#041E3A;
     color:red;
-    padding:3px 15px;
+    padding:5px 15px;
+    transform: scale(1.1);
     border-radius: 20px;
+    display: inline-block;
+    
 }
 #wrap main .polo_kids_collection .view_btn_wrap .view_btn {
     display: inline-block;
-    background-color: #f9f9f9;
-    padding:5px 10px;
+    
+    padding:5px 13px;
 
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .view_btn_wrap a span {} 
