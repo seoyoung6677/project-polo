@@ -38,7 +38,7 @@ body{
 #wrap {
     width:100%;
 }
-#wrap header {
+/* #wrap */ header {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -52,55 +52,55 @@ body{
     padding: 14px 60px;
     
 }
-#wrap header .logo {
+/* #wrap */ header .logo {
     display: block;
     width:256px;
     height:67px;
     background-image: url(../images/polo_logo.png);
     background-repeat: no-repeat;
 }
-#wrap header h1 {}
-#wrap header:hover .logo {
+/* #wrap */ header h1 {}
+/* #wrap */ header:hover .logo {
     background-image: url(../images/logo_change.png);
 }
-#wrap header nav {}
+/* #wrap */ header nav {}
 /* 마우스 올렸을때때 */
-#wrap header:hover {
+/* #wrap */ header:hover {
     /* background-color:rgba(28, 18, 118, 0.5); */
     background-color: #fff;
     
 }
-#wrap header:hover nav .gnb li > * {
+/* #wra */header:hover nav .gnb li > * {
     color:#041E3A;
     
     
 }
 /* 아이콘 네이비색 아이콘 준비해서 호버 줬을때 바뀌게 하기 */
-#wrap header:hover .right_menu li > a svg{
+/* #wrap */ header:hover .right_menu li > a svg{
     color:#041E3A;
 }
-#wrap header nav .gnb {
+/* #wrap  */header nav .gnb {
     display: flex;
     gap:40px;
     
 }
-#wrap header nav .gnb li {
+/* #wrap */ header nav .gnb li {
     white-space: nowrap;
     flex-flow:nowrap;
 }
 
-#wrap header nav .gnb li a {
+/* #wrap */ header nav .gnb li a {
     color:#fff;
     font-size: 0.875rem;
     font-weight: 600;
     transition: color 0.3s ease;
 }
-#wrap header .right_menu {
+/* #wrap */ header .right_menu {
     display: flex;
     gap:20px;
 }
-#wrap header .right_menu li {}
-#wrap header .right_menu li > a svg{
+/* #wrap */ header .right_menu li {}
+/* #wrap */ header .right_menu li > a svg{
     height:22px;
     width:22px;
     color:#fff;

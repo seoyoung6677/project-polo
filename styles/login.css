@@ -1,0 +1,74 @@
+body {background-image: url(../images/login/login_bg.jpg);}
+#wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+#wrap .login_wrap {}
+#wrap .login_wrap .login-container {
+    border: red solid 2px;
+    background:rgba(226,226, 226 ,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:507px;
+    height:590px;
+
+}
+#wrap .login_wrap .login-container h1 {
+    font-size:2.5rem ;
+    font-weight:700;
+    color:#041E3A;
+    margin-bottom :22px;
+}
+#wrap .login_wrap .login-container {
+    display: flex;
+    gap:5px;
+}
+#wrap .login_wrap .login-container > *{
+    color:#565656;
+   
+}
+#wrap .login_wrap .login-container p {
+    
+}
+#wrap .login_wrap .login-container:nth-child(1) {
+    font-size: 0.875rem;
+
+    
+
+}
+#wrap .login_wrap .login-container:nth-of-type(2) {
+    font-size:0.813rem;
+    margin-top: 100px;
+    margin-bottom: 44px;
+    border:2px solid red;
+}
+#wrap .login_wrap .login-container .tab_title {
+    
+}
+#wrap .login_wrap .login-container .tab_title > *{
+    width:140px;
+    display: inline-block;
+    padding:2px 10px;
+    border-bottom: 1px solid #041E3A;
+
+}
+#wrap .login_wrap .login-container .tab_title .sign_in {
+    
+    /* border:2px solid red; */
+}
+#wrap .login_wrap .login-container .tab_title .sign_in span {}
+#wrap .login_wrap .login-container .tab_title .guest_Orders span {}
+#wrap .login_wrap .login-container .tab_container {}
+#wrap .login_wrap .login-container .tab_container #login_frm {}
+#wrap .login_wrap .login-container .tab_container #login_frm .id_pw input{}
+#wrap .login_wrap .login-container .tab_container #login_frm .forgot_pw {}
+#wrap .login_wrap .login-container .tab_container #login_frm .login_stay {}
+#wrap .login_wrap .login-container .tab_container #login_frm .login_stay #user_stay_on {}
+#wrap .login_wrap .login-container .tab_container #login_frm .login_stay label {}
+#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap {}
+#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap #sign_in {}
+#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap #sign_up {}
