@@ -1,11 +1,20 @@
-body {background-image: url(../images/login/login_bg.jpg);}
+body {
+    background-image: url(../images/login-background.jpg);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
 #wrap{
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height:100; */
+    
 }
-#wrap .login_wrap {}
+#wrap .login_wrap {
+    /* height:2000px;; */
+    min-height: 1000px;
+}
 #wrap .login_wrap .login-container {
     border: red solid 2px;
     background:rgba(226,226, 226 ,0.5);

@@ -222,19 +222,23 @@ body{
     flex-shrink: 0;
     box-sizing: border-box;
     transition: none !important;
-    height:550px; /* 슬라이드에다가 높이? */
+    height:500px; /* 슬라이드에다가 높이? */
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img {
-    /* width:100%; */
+    width:100%;
     overflow: hidden;
+    /* aspect-ratio: 2/3; */
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img a {}
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img a img {
     max-width:331px;
     /* border:3px solid blue; */
     width:100%;
+    max-height:350px;
+    object-fit: cover;
     transition:all 0.3s ease;
     display: block;
+    object-position: center top;
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_img a img:hover{
     transform: scale(1.03);
@@ -254,6 +258,7 @@ body{
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_title a {
     font-size: 1.063rem;
+    font-family: 'Noto Sans KR' ,sans-serif;
 }
 
 
@@ -274,13 +279,14 @@ body{
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_title a .wishlist_btn img {}
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_subtxt{
     font-size: 0.563rem;
-    line-height:1.5;
+    line-height:1.6;
     color:#838383;
     word-break: keep-all;
     text-align: left;
     height: max-content;
     /* border: 3px solid red; */
     margin-bottom: 7px;
+    font-family: 'Noto Sans KR' ,sans-serif;
 }
 #wrap main .new_arrival #product_slide .swiper-wrapper .swiper-slide .product_info .product_price {
     display: flex;
@@ -711,7 +717,7 @@ border: 3px solid red;
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide {
     width:20%;
     margin-bottom: 109px;
-    height:550px;
+    height:500px;
     /* border:3px solid blue; */
     
 } 
@@ -726,6 +732,13 @@ border: 3px solid red;
     transition: transform 0.3s ease;
     object-fit: cover;
     display: block;
+    max-width:331px;
+    /* border:3px solid blue; */
+    width:100%;
+    max-height:350px;
+    object-fit: cover;
+    object-position: center top;
+
 } 
 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_img a:hover img {
@@ -743,7 +756,7 @@ border: 3px solid red;
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_info .kids_product_title a {
     font-size: 1.063rem;
-
+    font-family: 'Noto Sans KR' ,sans-serif;
     /* border: 3px solid red; */
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_info .kids_product_title .wishlist_btn {} 
@@ -751,7 +764,8 @@ border: 3px solid red;
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_info .kids_product_subtxt {
     font-size:0.563rem;
     color:#838383;
-    line-height:1.5;
+    line-height:1.6;
+    font-family: 'Noto Sans KR' ,sans-serif;
 } 
 #wrap main .polo_kids_collection #kids_product_slide .swiper-wrapper .swiper-slide .kids_product_info .kids_product_price {
     display: flex;
