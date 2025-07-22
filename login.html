@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/login.css">
     <script src="./script/index.js" defer></script>
+    <script src="./script/login.js" defer></script>
     
 </head>
 <body>
@@ -56,6 +57,7 @@
         <main>
         <div class="login_wrap">
             <div class="login-container">
+                <div class="login-group">
                 <h1>Login</h1>
                 <p>“클래식의 시작, 폴로에서.”</p>
                 <p>“The Beginning of Classic, with Polo.”</p>
@@ -67,9 +69,10 @@
                     <!-- 로그인 클릭시 열리는 탭메뉴 -->
                     <form action="#" method="post" id="login_frm">
                         <div class="id_pw">
-                            <input type="text" name="user_email" placeholder="이메일">
-                            <input type="text" name="user_pw" placeholder="비밀번호">
+                            <input type="text" name="user_email" id="user_email" placeholder="이메일">
+                            <input type="text" name="user_pw" id="user_pw" placeholder="비밀번호">
                         </div>
+                        <p class="error-msg" id="login_error"></p>
                         <a href="#" class="forgot_pw">비밀번호를 잊으셨나요?</a></p>
                         <p class="login_stay">
                             <input type="checkbox" value="user_stay_on" name="user_stay" id="user_stay_on">
@@ -81,6 +84,7 @@
                         </div>
                     </form>
                 </div>
+            </div>
             </div>
         </div>
         <footer>

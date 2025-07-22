@@ -14,34 +14,51 @@ body {
 #wrap .login_wrap {
     /* height:2000px;; */
     min-height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #wrap .login_wrap .login-container {
-    border: red solid 2px;
+    /* border: red solid 2px; */
     background:rgba(226,226, 226 ,0.5);
+    width:507px;
+    height:590px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:507px;
-    height:590px;
 
 }
-#wrap .login_wrap .login-container h1 {
+#wrap .login_wrap .login-container .login-group {
+    /* border: green solid 2px; */
+    width:290px;
+    
+    
+}
+#wrap .login_wrap .login-container .login-group  h1 {
     font-size:2.5rem ;
     font-weight:700;
     color:#041E3A;
     margin-bottom :22px;
+    text-align: center;
 }
 #wrap .login_wrap .login-container {
     display: flex;
     gap:5px;
 }
-#wrap .login_wrap .login-container > *{
+#wrap .login_wrap .login-container .login-group > *{
     color:#565656;
-   
 }
-#wrap .login_wrap .login-container p {
-    
+#wrap .login_wrap .login-container .login-group p:nth-of-type(1){
+    /* border:3px solid blue; */
+    margin-bottom: 5px;
+}
+#wrap .login_wrap .login-container .login-group p:nth-of-type(2){
+    margin-bottom:28px ;
+}
+#wrap .login_wrap .login-container .login-group > p {
+    text-align: center;
 }
 #wrap .login_wrap .login-container:nth-child(1) {
     font-size: 0.875rem;
@@ -49,35 +66,112 @@ body {
     
 
 }
-#wrap .login_wrap .login-container:nth-of-type(2) {
-    font-size:0.813rem;
-    margin-top: 100px;
-    margin-bottom: 44px;
-    border:2px solid red;
+
+#wrap .login_wrap .login-container .login-group .tab_title {
+    
+    /* width:100%; */
+    width: 280px;
+    /* border:1px solid red; */
+    display: flex;
+    gap:10px;
+    margin-bottom:28px ;
 }
-#wrap .login_wrap .login-container .tab_title {
+#wrap .login_wrap .login-container .login-group .tab_title a {
+    width:50%;
+    text-align: center;
+    float:left;
+    border-bottom: 1px solid #041E3A;
+    padding:2px 10px;
     
 }
-#wrap .login_wrap .login-container .tab_title > *{
-    width:140px;
-    display: inline-block;
-    padding:2px 10px;
-    border-bottom: 1px solid #041E3A;
 
+#wrap .login_wrap .login-container .tab_title span {
+    display: inline-block;
+    
 }
-#wrap .login_wrap .login-container .tab_title .sign_in {
+#wrap .login_wrap .login-container .tab_title .guest_Orders {
+    border-bottom: #696969;
+    
+}
+#wrap .login_wrap .login-container .tab_title .guest_Orders span {
+    color:#696969;
     
     /* border:2px solid red; */
 }
 #wrap .login_wrap .login-container .tab_title .sign_in span {}
 #wrap .login_wrap .login-container .tab_title .guest_Orders span {}
-#wrap .login_wrap .login-container .tab_container {}
-#wrap .login_wrap .login-container .tab_container #login_frm {}
-#wrap .login_wrap .login-container .tab_container #login_frm .id_pw input{}
-#wrap .login_wrap .login-container .tab_container #login_frm .forgot_pw {}
-#wrap .login_wrap .login-container .tab_container #login_frm .login_stay {}
-#wrap .login_wrap .login-container .tab_container #login_frm .login_stay #user_stay_on {}
+#wrap .login_wrap .login-container .tab_container {
+    align:center;
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .id_pw {
+    margin-bottom:10px ;
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .id_pw input[name^=user_]{
+    /* padding:13px 5px;
+    padding-left:20px;
+    padding-right: 220px; */
+    border:1px solid #000; 
+    color:#565656;
+    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    width:100%;
+    height:42px;
+    border:1px solid #000;
+    padding:0 20px;
+    font-size: 0.813rem;
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .id_pw input 
+#wrap .login_wrap .login-container .tab_container #login_frm .id_pw input[name^=user]{
+    
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .id_pw input[name="user_pw"]{
+    margin-top:12px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .forgot_pw {
+    text-align: left;
+    font-size: 0.625rem;
+    border-bottom: 1px solid #000;
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .login_stay {
+    margin-top:29px;
+    font-size:0.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap:5px;
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .login_stay #user_stay_on {
+    
+}
 #wrap .login_wrap .login-container .tab_container #login_frm .login_stay label {}
-#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap {}
-#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap #sign_in {}
-#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap #sign_up {}
+#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap button {
+    
+    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    width:100%;
+    height:42px;
+    font-weight: 600;
+    padding:0 20px;
+    font-size: 0.813rem;
+    margin-bottom:10px ;
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap #sign_in {
+    background: #041E3A;
+    color:rgba(255, 255, 255, 0.6);
+}
+#wrap .login_wrap .login-container .tab_container #login_frm .btn_wrap #sign_up {
+    color:rgba(255, 255, 255, 0.6);
+    background:#A1A1A1 ;
+}
+
+.error-msg {
+    color:red;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    margin-bottom:15px;
+    display:none; /* 기본 숨김 */
+}
