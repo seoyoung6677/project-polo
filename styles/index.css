@@ -1,5 +1,12 @@
 body{
     overflow-x: hidden;
+    min-width: 1200px;
+}
+* {box-sizing: border-box;}
+body{min-width:1280px;}
+#wrap {
+    max-width: 1920px;
+    margin:0 auto;
 }
 /* topbanner */
 .top_banner {
@@ -152,6 +159,8 @@ body{
     display:block;
 }
 /* 3행============= */
+
+
 #wrap main .new_arrival {
     /* border:red solid 3px; */
     position:relative;
